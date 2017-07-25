@@ -16,6 +16,8 @@ install:
   - where mingw32-make
   - where bash
   - where ls
+  - where curl
+  - where wget
 
   - go get ./...
   - go get github.com/mattn/goveralls
