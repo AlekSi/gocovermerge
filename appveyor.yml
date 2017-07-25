@@ -9,14 +9,7 @@ environment:
 
 install:
   - set PATH=%PATH%;C:\msys64\mingw64\bin;%GOPATH%\bin
-
   - go version
-  - echo %PATH%
-  - go env
-  - where mingw32-make
-  - where bash
-  - where ls
-  - where curl
 
   - go get ./...
   - go get github.com/mattn/goveralls
