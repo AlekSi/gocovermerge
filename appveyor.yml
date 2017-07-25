@@ -4,6 +4,8 @@ clone_folder: c:\gopath\src\github.com\AlekSi\gocovermerge
 
 environment:
   GOPATH: c:\gopath
+  COVERALLS_TOKEN:
+    secure: y4JfJUY7BUnX1pOwC/b9veXUP4pfBDh1m06eqrrOxGhK9lejBgxSTHE1gqQvDq7z
 
 install:
   - set PATH=%PATH%;C:\msys64\mingw64\bin;%GOPATH%\bin
