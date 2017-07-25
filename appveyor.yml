@@ -19,7 +19,11 @@ install:
   - go get github.com/mattn/goveralls
 
 build_script:
+  - mingw32-make install
+
+test_script:
   - mingw32-make
 
-# on_success:
-#   -
+on_success:
+  - goveralls -coverprofile=cover.out
+  - bash <(curl -s https://codecov.io/bash) -X fix
