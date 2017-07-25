@@ -1,0 +1,25 @@
+version: '{build}'
+
+clone_folder: c:\gopath\src\github.com\AlekSi\gocovermerge
+
+environment:
+  GOPATH: c:\gopath
+
+install:
+  - set PATH=%PATH%;C:\msys64\mingw64\bin;%GOPATH%\bin
+
+  - go version
+  - echo %PATH%
+  - go env
+  - where mingw32-make
+  - where bash
+  - where ls
+
+  - go get ./...
+  - go get github.com/mattn/goveralls
+
+test_script:
+  - mingw32-make
+
+# on_success:
+#   -
