@@ -27,5 +27,5 @@ test_script:
   - mingw32-make
 
 on_success:
-  - goveralls -coverprofile=cover.out
+  - goveralls -coverprofile=cover.out -service=
   - bash <(curl -s https://codecov.io/bash) -X fix
