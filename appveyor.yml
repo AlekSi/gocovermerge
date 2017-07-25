@@ -17,7 +17,6 @@ install:
   - where bash
   - where ls
   - where curl
-  - where wget
 
   - go get ./...
   - go get github.com/mattn/goveralls
@@ -30,4 +29,5 @@ test_script:
 
 on_success:
   - goveralls -coverprofile=cover.out -service=
-  - bash <(curl -s https://codecov.io/bash) -X fix
+  - curl -s -o codecov https://codecov.io/bash
+  - bash codecov -X fix
